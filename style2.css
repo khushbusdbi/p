@@ -1,0 +1,51 @@
+/* General Styling */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: darkblue;
+}
+
+/* Styling Heart Container */
+div {
+    position: relative;
+    text-align: center;
+}
+
+/* Styling Heart */
+.fa-heart {
+    color: beige;
+    font-size: 250px;
+    height: 100px;
+    width: 100px;
+    /* Animating heart */
+    animation: pulse 1s linear infinite;
+}
+
+.heart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    width: 100%; /* Make sure text spans the entire width */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
